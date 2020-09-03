@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Medi2020.Models.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="doctor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Vezeteknev" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Keresztnev" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SzakteruletId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="patient">
+          <Key>
+            <PropertyRef Name="Taj" />
+          </Key>
+          <Property Name="Taj" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="Jelszo" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="Vezeteknev" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Keresztnev" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Iranyitoszam" Type="int" Nullable="false" />
+          <Property Name="Telepules" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Lakcim" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="75" Nullable="false" />
+          <Property Name="Telefon" Type="varchar" MaxLength="11" Nullable="false" />
+        </EntityType>
+        <EntityType Name="service">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nev" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Egysegar" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="specialization">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nev" Type="varchar" MaxLength="25" Nullable="false" />
+        </EntityType>
+        <EntityType Name="visit">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Idopont" Type="timestamp" Precision="0" Nullable="false" />
+          <Property Name="BetegTaj" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="OrvosId" Type="int" Nullable="false" />
+          <Property Name="SzolgaltatasId" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="doctor_ibfk_1">
+          <End Role="specialization" Type="Self.specialization" Multiplicity="1" />
+          <End Role="doctor" Type="Self.doctor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="specialization">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="doctor">
+              <PropertyRef Name="SzakteruletId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="visit_ibfk_1">
+          <End Role="doctor" Type="Self.doctor" Multiplicity="1" />
+          <End Role="visit" Type="Self.visit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="doctor">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="visit">
+              <PropertyRef Name="OrvosId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="visit_ibfk_2">
+          <End Role="service" Type="Self.service" Multiplicity="1" />
+          <End Role="visit" Type="Self.visit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="service">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="visit">
+              <PropertyRef Name="SzolgaltatasId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="visit_ibfk_3">
+          <End Role="patient" Type="Self.patient" Multiplicity="1" />
+          <End Role="visit" Type="Self.visit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="patient">
+              <PropertyRef Name="Taj" />
+            </Principal>
+            <Dependent Role="visit">
+              <PropertyRef Name="BetegTaj" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Medi2020ModelsStoreContainer">
+          <EntitySet Name="doctor" EntityType="Self.doctor" Schema="medi_2020" store:Type="Tables" />
+          <EntitySet Name="patient" EntityType="Self.patient" Schema="medi_2020" store:Type="Tables" />
+          <EntitySet Name="service" EntityType="Self.service" Schema="medi_2020" store:Type="Tables" />
+          <EntitySet Name="specialization" EntityType="Self.specialization" Schema="medi_2020" store:Type="Tables" />
+          <EntitySet Name="visit" EntityType="Self.visit" Schema="medi_2020" store:Type="Tables" />
+          <AssociationSet Name="doctor_ibfk_1" Association="Self.doctor_ibfk_1">
+            <End Role="specialization" EntitySet="specialization" />
+            <End Role="doctor" EntitySet="doctor" />
+          </AssociationSet>
+          <AssociationSet Name="visit_ibfk_1" Association="Self.visit_ibfk_1">
+            <End Role="doctor" EntitySet="doctor" />
+            <End Role="visit" EntitySet="visit" />
+          </AssociationSet>
+          <AssociationSet Name="visit_ibfk_2" Association="Self.visit_ibfk_2">
+            <End Role="service" EntitySet="service" />
+            <End Role="visit" EntitySet="visit" />
+          </AssociationSet>
+          <AssociationSet Name="visit_ibfk_3" Association="Self.visit_ibfk_3">
+            <End Role="patient" EntitySet="patient" />
+            <End Role="visit" EntitySet="visit" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Medi2020.Models" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="doctor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Vezeteknev" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Keresztnev" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SzakteruletId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="specialization" Relationship="Self.doctor_ibfk_1" FromRole="doctor" ToRole="specialization" />
+          <NavigationProperty Name="visits" Relationship="Self.visit_ibfk_1" FromRole="doctor" ToRole="visit" />
+        </EntityType>
+        <EntityType Name="patient">
+          <Key>
+            <PropertyRef Name="Taj" />
+          </Key>
+          <Property Name="Taj" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Jelszo" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Vezeteknev" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Keresztnev" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Iranyitoszam" Type="Int32" Nullable="false" />
+          <Property Name="Telepules" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Lakcim" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="75" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Telefon" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="visits" Relationship="Self.visit_ibfk_3" FromRole="patient" ToRole="visit" />
+        </EntityType>
+        <EntityType Name="service">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nev" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Egysegar" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="visits" Relationship="Self.visit_ibfk_2" FromRole="service" ToRole="visit" />
+        </EntityType>
+        <EntityType Name="specialization">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nev" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="doctors" Relationship="Self.doctor_ibfk_1" FromRole="specialization" ToRole="doctor" />
+        </EntityType>
+        <EntityType Name="visit">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Idopont" Type="DateTime" Nullable="false" />
+          <Property Name="BetegTaj" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="OrvosId" Type="Int32" Nullable="false" />
+          <Property Name="SzolgaltatasId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="doctor" Relationship="Self.visit_ibfk_1" FromRole="visit" ToRole="doctor" />
+          <NavigationProperty Name="patient" Relationship="Self.visit_ibfk_3" FromRole="visit" ToRole="patient" />
+          <NavigationProperty Name="service" Relationship="Self.visit_ibfk_2" FromRole="visit" ToRole="service" />
+        </EntityType>
+        <Association Name="doctor_ibfk_1">
+          <End Role="specialization" Type="Self.specialization" Multiplicity="1" />
+          <End Role="doctor" Type="Self.doctor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="specialization">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="doctor">
+              <PropertyRef Name="SzakteruletId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="visit_ibfk_1">
+          <End Role="doctor" Type="Self.doctor" Multiplicity="1" />
+          <End Role="visit" Type="Self.visit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="doctor">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="visit">
+              <PropertyRef Name="OrvosId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="visit_ibfk_3">
+          <End Role="patient" Type="Self.patient" Multiplicity="1" />
+          <End Role="visit" Type="Self.visit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="patient">
+              <PropertyRef Name="Taj" />
+            </Principal>
+            <Dependent Role="visit">
+              <PropertyRef Name="BetegTaj" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="visit_ibfk_2">
+          <End Role="service" Type="Self.service" Multiplicity="1" />
+          <End Role="visit" Type="Self.visit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="service">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="visit">
+              <PropertyRef Name="SzolgaltatasId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Medi2020Context" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="doctors" EntityType="Self.doctor" />
+          <EntitySet Name="patients" EntityType="Self.patient" />
+          <EntitySet Name="services" EntityType="Self.service" />
+          <EntitySet Name="specializations" EntityType="Self.specialization" />
+          <EntitySet Name="visits" EntityType="Self.visit" />
+          <AssociationSet Name="doctor_ibfk_1" Association="Self.doctor_ibfk_1">
+            <End Role="specialization" EntitySet="specializations" />
+            <End Role="doctor" EntitySet="doctors" />
+          </AssociationSet>
+          <AssociationSet Name="visit_ibfk_1" Association="Self.visit_ibfk_1">
+            <End Role="doctor" EntitySet="doctors" />
+            <End Role="visit" EntitySet="visits" />
+          </AssociationSet>
+          <AssociationSet Name="visit_ibfk_3" Association="Self.visit_ibfk_3">
+            <End Role="patient" EntitySet="patients" />
+            <End Role="visit" EntitySet="visits" />
+          </AssociationSet>
+          <AssociationSet Name="visit_ibfk_2" Association="Self.visit_ibfk_2">
+            <End Role="service" EntitySet="services" />
+            <End Role="visit" EntitySet="visits" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Medi2020ModelsStoreContainer" CdmEntityContainer="Medi2020Context">
+          <EntitySetMapping Name="doctors">
+            <EntityTypeMapping TypeName="Medi2020.Models.doctor">
+              <MappingFragment StoreEntitySet="doctor">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Vezeteknev" ColumnName="Vezeteknev" />
+                <ScalarProperty Name="Keresztnev" ColumnName="Keresztnev" />
+                <ScalarProperty Name="SzakteruletId" ColumnName="SzakteruletId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="patients">
+            <EntityTypeMapping TypeName="Medi2020.Models.patient">
+              <MappingFragment StoreEntitySet="patient">
+                <ScalarProperty Name="Taj" ColumnName="Taj" />
+                <ScalarProperty Name="Jelszo" ColumnName="Jelszo" />
+                <ScalarProperty Name="Vezeteknev" ColumnName="Vezeteknev" />
+                <ScalarProperty Name="Keresztnev" ColumnName="Keresztnev" />
+                <ScalarProperty Name="Iranyitoszam" ColumnName="Iranyitoszam" />
+                <ScalarProperty Name="Telepules" ColumnName="Telepules" />
+                <ScalarProperty Name="Lakcim" ColumnName="Lakcim" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="services">
+            <EntityTypeMapping TypeName="Medi2020.Models.service">
+              <MappingFragment StoreEntitySet="service">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nev" ColumnName="Nev" />
+                <ScalarProperty Name="Egysegar" ColumnName="Egysegar" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="specializations">
+            <EntityTypeMapping TypeName="Medi2020.Models.specialization">
+              <MappingFragment StoreEntitySet="specialization">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nev" ColumnName="Nev" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="visits">
+            <EntityTypeMapping TypeName="Medi2020.Models.visit">
+              <MappingFragment StoreEntitySet="visit">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Idopont" ColumnName="Idopont" />
+                <ScalarProperty Name="BetegTaj" ColumnName="BetegTaj" />
+                <ScalarProperty Name="OrvosId" ColumnName="OrvosId" />
+                <ScalarProperty Name="SzolgaltatasId" ColumnName="SzolgaltatasId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

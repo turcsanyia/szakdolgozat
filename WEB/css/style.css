@@ -1,0 +1,45 @@
+.btn-primary {
+    width: 100%;
+}
+
+.box {
+    max-width: 50%;
+    padding: 5%;
+    margin: auto;
+    width: 100%;
+}
+
+.hiba {
+    text-align: right;
+    color: red;
+}
+
+.hiba2 {
+    text-align: center;
+    color: red;
+}
+
+.adatvedelem {
+    margin-top: 5%;
+}
+
+img {
+    height: 50%;
+    width: 100%;
+}
+
+.details {
+    margin: 0 auto;
+}
+
+.szoveg {
+    padding: 3%;
+}
+
+.alapnezet {
+    padding: 3%;
+}
+
+.hibalista {
+    color: red;
+}

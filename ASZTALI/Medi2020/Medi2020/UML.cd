@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Medi2020.Models.Medi2020Context" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAEAAEAAAAAAAAAIYAAAA=</HashCode>
+      <FileName>Models\Models.Context.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Medi2020.Models.doctor" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAACAAAAAAEAAAEAAEAAAQAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Models\doctor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Medi2020.Models.patient" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACCAgAACEAAAEAAAAEAQAAAAAAAAgAAQBAAA=</HashCode>
+      <FileName>Models\patient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Medi2020.Models.service" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAACAEAAAEACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\service.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Medi2020.Models.specialization" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAACAEAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Models\specialization.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Medi2020.Models.visit" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAOAAAJAAAAAAAAAAAAAAAABAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Models\visit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Medi2020.Presenters.AddVisitPresenter" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Presenters\AddVisitPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Medi2020.Presenters.DoctorPresenter" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Presenters\DoctorPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Medi2020.Presenters.DoctorsListPresenter" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAIIAAAAASAAAAAAAABAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Presenters\DoctorsListPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Medi2020.Presenters.MainPresenter" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Presenters\MainPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Medi2020.Presenters.PatientPresenter" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACCAAAAAAAAAAAAAAAACAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Presenters\PatientPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Medi2020.Presenters.PatientsListPresenter" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAIIAAAAASAAAAAAAABAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Presenters\PatientsListPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Medi2020.Presenters.UpdateVisitPresenter" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Presenters\UpdateVisitPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Medi2020.Presenters.VisitsListPresenter" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAIIAAAAASAAAAAAAABAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Presenters\VisitsListPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Medi2020.Program" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Medi2020.Properties.Resources" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Medi2020.Properties.Settings" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Medi2020.Repositories.DoctorRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAMAABCAQAAAgAAAAABQAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\DoctorRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Medi2020.Repositories.PatientRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAMAAACAQAAAgAAAAAAQAAAEACCAAAAAAACAAAAA=</HashCode>
+      <FileName>Repositories\PatientRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Medi2020.Repositories.ServiceRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAACAQAAAgAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Repositories\ServiceRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Medi2020.Repositories.SpecializationRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAQAAAgAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Repositories\SpecializationRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Medi2020.Repositories.VisitRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAMACACAQAAAgAIAAAAQAAAEAAAAAAgAAQAAAAAA=</HashCode>
+      <FileName>Repositories\VisitRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Medi2020.ViewModels.VisitVM" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAEAAAJQAAAAAAAEAAAAAAQAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\VisitVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Medi2020.Views.FormAddVisit" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAgAAACEAABAIAACQgAADAAAkAAAAAQAAAIKEACA=</HashCode>
+      <FileName>Views\FormAddVisit.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Medi2020.Views.FormDoctor" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAgAACEAABAIAASAAAACBAAgAAAAAQAAAAQAAiA=</HashCode>
+      <FileName>Views\FormDoctor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Medi2020.Views.FormDoctorsList" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AqAAAIIAgmAABFMQEAGQhABiMCQgABAAJCCAATABECA=</HashCode>
+      <FileName>Views\FormDoctorsList.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Medi2020.Views.FormMain" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>TIAEAAAIACgAAAAAIACAAAACAAAgCQAAACAIAAAAAAA=</HashCode>
+      <FileName>Views\FormMain.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Medi2020.Views.FormPatient" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAIAAxAACEAABJIAASAAAACAAAgAAAAIQAAACAABCA=</HashCode>
+      <FileName>Views\FormPatient.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Medi2020.Views.FormPatientsList" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAIIAimCgBFOAEAGQhABiUCQgABAAJCCgARIBECA=</HashCode>
+      <FileName>Views\FormPatientsList.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Medi2020.Views.FormUpdateVisit" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAgAAACEACBAIAACAABADAAAgAAAAAQAAANCAACA=</HashCode>
+      <FileName>Views\FormUpdateVisit.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Medi2020.Views.FormVisitsList" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAEAIIAgmBABFMBEAGRhCBiECQoABQAJCCAARABECA=</HashCode>
+      <FileName>Views\FormVisitsList.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="Medi2020.ViewInterfaces.IAddVisitView" Collapsed="true">
+    <Position X="0.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAIKAAAA=</HashCode>
+      <FileName>ViewInterfaces\IAddVisitView.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Medi2020.ViewInterfaces.IDataGridList&lt;G&gt;" Collapsed="true">
+    <Position X="2.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAABEAAAAEABAAAAAAAAAAAACAAAAABAAA=</HashCode>
+      <FileName>ViewInterfaces\IDataGridList.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Medi2020.ViewInterfaces.IDoctorView" Collapsed="true">
+    <Position X="4" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>ViewInterfaces\IDoctorView.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Medi2020.ViewInterfaces.IMainView" Collapsed="true">
+    <Position X="5.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewInterfaces\IMainView.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Medi2020.ViewInterfaces.IPatientView" Collapsed="true">
+    <Position X="7.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewInterfaces\IPatientView.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Medi2020.ViewInterfaces.IUpdateVisitView" Collapsed="true">
+    <Position X="9.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAICAAAA=</HashCode>
+      <FileName>ViewInterfaces\IUpdateVisitView.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

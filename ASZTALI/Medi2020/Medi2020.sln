@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medi2020", "Medi2020\Medi2020.csproj", "{D35112F8-B66B-4527-AC4F-696921637F95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medi2020Tests", "Medi2020Tests\Medi2020Tests.csproj", "{AB8747D6-9EE7-4942-BFE3-100A196B7730}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D35112F8-B66B-4527-AC4F-696921637F95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D35112F8-B66B-4527-AC4F-696921637F95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D35112F8-B66B-4527-AC4F-696921637F95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D35112F8-B66B-4527-AC4F-696921637F95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB8747D6-9EE7-4942-BFE3-100A196B7730}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB8747D6-9EE7-4942-BFE3-100A196B7730}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB8747D6-9EE7-4942-BFE3-100A196B7730}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB8747D6-9EE7-4942-BFE3-100A196B7730}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A9557C8E-7681-45F3-B0F3-9BDA4EB1F75D}
+	EndGlobalSection
+EndGlobal

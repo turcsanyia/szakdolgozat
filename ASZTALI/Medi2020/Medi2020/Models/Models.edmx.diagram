@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ebfafe7db32445a899cb465d8f3ff6b6" Name="Diagram1">
+        <EntityTypeShape EntityType="Medi2020.Models.doctor" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Medi2020.Models.patient" Width="1.5" PointX="7.375" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Medi2020.Models.service" Width="1.5" PointX="4.5" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Medi2020.Models.specialization" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Medi2020.Models.visit" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="Medi2020.Models.doctor_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="Medi2020.Models.visit_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="Medi2020.Models.visit_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="Medi2020.Models.visit_ibfk_2" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
